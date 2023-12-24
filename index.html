@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suitmedia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header id="myHeader">
+        <a href="#" class="logo">
+            <img src="icon22.png" alt="logoSuitmedia" width="100px">
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#index.html" class="active">Ideas</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="parallax">
+        <img id="parallax-banner-img" src="https://source.unsplash.com/random" alt="Banner Image" loading="lazy">
+        <div class="parallax-text">
+            <h1>Ideas</h1>
+            <p>Where all our great things begin</p>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div id="filter">
+            <label for="sort">Sort By:</label>
+            <select id="sort" onchange="sortPosts()">
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+            </select>
+
+            <label for="showPerPage">Show Per Page:</label>
+            <select id="showPerPage" onchange="changeShowPerPage()">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+        <div id="post-container" class="post-container">
+            <!-- Posts will be dynamically loaded here -->
+        </div>
+        <div id="pagination" class="pagination"></div>
+    </div>
+
+    <script src="script.js" />
+</body>
+
+</html>
